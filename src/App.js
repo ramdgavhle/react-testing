@@ -3,15 +3,14 @@ import UserForm from './UserForm';
 import UserList from './UserList';
 
 function App() {
-
   const [users, setUsers] = useState([]);
 
-  const onUserAdd = user => {
+  const onUserAdd = (user) => {
     setUsers([...users, user]);
   };
 
   return (
-    <div className="App">
+    <div>
       <UserForm onUserAdd={onUserAdd} />
       <hr />
       <UserList users={users} />
